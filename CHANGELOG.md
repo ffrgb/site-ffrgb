@@ -1,4 +1,7 @@
-# Freifunk München Firmware Changelog
+# Freifunk Regensburg Firmware Changelog
+
+## snapshot~20150303
+ - forked to Regensburg in preparation for Infrastructure Split
 
 ## v2015.1
  - Updated to Gluon 2014.4 release
