@@ -9,7 +9,7 @@ ifneq (,${_GIT_DESCRIBE})
   GLUON_RELEASE := ${_GIT_DESCRIBE}
   GLUON_BRANCH := stable
 else
-  GLUON_RELEASE ?= snapshot~$(shell date '+%Y%m%d')~$(shell git describe --always)
+  GLUON_RELEASE ?= ffrgb-snapshot~$(shell date '+%Y%m%d')~$(shell git describe --always)
   GLUON_BRANCH := experimental
 endif
 
