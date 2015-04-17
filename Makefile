@@ -4,12 +4,10 @@ GLUON_GIT_REF := v2014.4
 
 SECRET_KEY_FILE ?= ${HOME}/.gluon-secret-key
 
-_GIT_DESCRIBE = $(shell git describe --tags 2>/dev/null)
-ifneq (,${_GIT_DESCRIBE})
-  GLUON_RELEASE := ${_GIT_DESCRIBE}
+GLUON_RELEASE := $(shell git describe --tags 2>/dev/null)
+ifneq (,$(shell git describe --exact-match --tags 2>/dev/null))
   GLUON_BRANCH := stable
 else
-  GLUON_RELEASE ?= ffrgb-snapshot~$(shell date '+%Y%m%d')~$(shell git describe --always)
   GLUON_BRANCH := experimental
 endif
 
@@ -19,10 +17,18 @@ GLUON_MAKE := ${MAKE} -j ${JOBS} -C ${GLUON_BUILD_DIR} \
                       GLUON_RELEASE=${GLUON_RELEASE} \
                       GLUON_BRANCH=${GLUON_BRANCH}
 
-all: gluon-clean
+all: info
+	${MAKE} gluon-clean
 	${MAKE} manifest
 	${MAKE} gluon-clean
-
+	
+info:
+	@echo
+	@echo '#########################'
+	@echo '# FFRGB Firmare build'
+	@echo '# Building release ${GLUON_RELEASE} for branch ${GLUON_BRANCH}'
+	@echo	
+	
 build: gluon-prepare
 	${GLUON_MAKE}
 
