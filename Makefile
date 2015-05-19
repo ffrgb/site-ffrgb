@@ -1,8 +1,13 @@
 GLUON_BUILD_DIR := gluon-build
-GLUON_GIT_URL := git://github.com/freifunk-gluon/gluon.git
-GLUON_GIT_REF := v2014.4
+GLUON_GIT_URL := https://github.com/freifunk-gluon/gluon.git
+GLUON_GIT_REF := v2015.1
 
 SECRET_KEY_FILE ?= ${HOME}/.gluon-secret-key
+
+GLUON_TARGETS ?= \
+	ar71xx-generic \
+	ar71xx-nand \
+	x86-kvm_guest
 
 GLUON_RELEASE := $(shell git describe --tags 2>/dev/null)
 ifneq (,$(shell git describe --exact-match --tags 2>/dev/null))
@@ -14,23 +19,24 @@ endif
 JOBS ?= $(shell cat /proc/cpuinfo | grep processor | wc -l)
 
 GLUON_MAKE := ${MAKE} -j ${JOBS} -C ${GLUON_BUILD_DIR} \
-                      GLUON_RELEASE=${GLUON_RELEASE} \
-                      GLUON_BRANCH=${GLUON_BRANCH}
+			GLUON_RELEASE=${GLUON_RELEASE} \
+			GLUON_BRANCH=${GLUON_BRANCH}
 
 all: info
-	${MAKE} gluon-clean
 	${MAKE} manifest
-	${MAKE} gluon-clean
-	
+
 info:
 	@echo
 	@echo '#########################'
 	@echo '# FFRGB Firmare build'
 	@echo '# Building release ${GLUON_RELEASE} for branch ${GLUON_BRANCH}'
-	@echo	
-	
+	@echo
+
 build: gluon-prepare
-	${GLUON_MAKE}
+	for target in ${GLUON_TARGETS}; do \
+		echo ""Building target $$target""; \
+		${GLUON_MAKE} GLUON_TARGET="$$target"; \
+	done
 
 manifest: build
 	${GLUON_MAKE} manifest
