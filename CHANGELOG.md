@@ -1,5 +1,15 @@
 # Freifunk Regensburg Firmware Changelog
 
+## v2015.1-ffrgb
+ - Update to Gluon v2015.1
+ - Integrated no_rebroadcast fix on mesh-vpn from Gluon Upstream
+ - Added FFMuc custom gluon packages with ebtables rules:
+   - mcast-drop-non-site to prohibit arp traffic except 10.8.0.0/16
+   - mcast-drop-arp to drop arp traffic from/to 0.0.0.0
+   - mcast-allow-cjdns to allow cjdns multicast traffic
+ - Changed default download/upload traffic shaping to 12.000/1.200 kbit/s
+ - Added support for several new devices
+
 ## snapshot~20150303
  - forked to Regensburg in preparation for Infrastructure Split
 
