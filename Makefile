@@ -32,6 +32,7 @@ info:
 	@echo '#########################'
 	@echo '# FFRGB Firmare build'
 	@echo '# Building release ${GLUON_RELEASE} for branch ${GLUON_BRANCH}'
+	@echo '# make params: ${GLUON_MAKE}'
 	@echo
 
 build: gluon-prepare
