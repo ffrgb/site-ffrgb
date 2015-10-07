@@ -1,13 +1,15 @@
 GLUON_BUILD_DIR := gluon-build
 GLUON_GIT_URL := https://github.com/freifunk-gluon/gluon.git
-GLUON_GIT_REF := v2015.1
+GLUON_GIT_REF := v2015.1.2
 
 SECRET_KEY_FILE ?= ${HOME}/.gluon-secret-key
 
 GLUON_TARGETS ?= \
 	ar71xx-generic \
 	ar71xx-nand \
-	x86-kvm_guest
+	x86-kvm_guest \
+	x86-generic \
+	x86-xen_domu
 
 GLUON_RELEASE := $(shell git describe --tags 2>/dev/null)
 ifneq (,$(shell git describe --exact-match --tags 2>/dev/null))
