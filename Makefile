@@ -1,14 +1,12 @@
 GLUON_BUILD_DIR := gluon-build
 GLUON_GIT_URL := https://github.com/freifunk-gluon/gluon.git
-GLUON_GIT_REF := 3f704405276c86db17052df234179bc5a7f24aae
+GLUON_GIT_REF := v2015.1.2
 
 SECRET_KEY_FILE ?= ${HOME}/.gluon-secret-key
 
 GLUON_TARGETS ?= \
 	ar71xx-generic \
-	ar71xx-nand \
-	x86-kvm_guest \
-	x86-generic 
+	ar71xx-nand 
 
 GLUON_RELEASE := $(shell git describe --tags 2>/dev/null)
 ifneq (,$(shell git describe --exact-match --tags 2>/dev/null))
@@ -18,9 +16,10 @@ else
 endif
 
 JOBS ?= $(shell cat /proc/cpuinfo | grep processor | wc -l)
-JOBS = 1
 
-GLUON_MAKE := ${MAKE} -j ${JOBS} -C ${GLUON_BUILD_DIR} \
+#JOBS = 1
+
+GLUON_MAKE := ${MAKE} V=s -j ${JOBS} -C ${GLUON_BUILD_DIR} \
 			GLUON_RELEASE=${GLUON_RELEASE} \
 			GLUON_BRANCH=${GLUON_BRANCH} \
 
