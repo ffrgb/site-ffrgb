@@ -43,6 +43,12 @@ build: gluon-prepare
 		${GLUON_MAKE} GLUON_TARGET="$$target"; \
 	done
 
+buildonly: for target in ${GLUON_TARGETS}; do \
+                echo ""Building target $$target""; \
+                ${GLUON_MAKE} GLUON_TARGET="$$target"; \
+        	done
+
+
 manifest: build
 	${GLUON_MAKE} manifest
 	mv ${GLUON_BUILD_DIR}/output .
