@@ -7,7 +7,11 @@ SECRET_KEY_FILE ?= ${HOME}/.gluon-secret-key
 GLUON_TARGETS ?= \
 	ar71xx-generic \
 	ar71xx-nand \
-	x86-kvm_guest
+	mpc85xx-generic \
+	x86-64 \
+	x86-generic \
+	x86-kvm_guest \
+	x86-xen_domu
 
 GLUON_RELEASE := $(shell git describe --tags 2>/dev/null)
 ifneq (,$(shell git describe --exact-match --tags 2>/dev/null))
