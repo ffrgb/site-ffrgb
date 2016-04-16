@@ -16,7 +16,6 @@ else
   GLUON_BRANCH := experimental
 endif
 
-JOBS ?= $(shell cat /proc/cpuinfo | grep processor | wc -l)
 JOBS = 1
 
 GLUON_MAKE := ${MAKE} -j ${JOBS} -C ${GLUON_BUILD_DIR} \
@@ -42,23 +41,26 @@ build: gluon-prepare
 
 manifest: build
 	${GLUON_MAKE} manifest
-	mv ${GLUON_BUILD_DIR}/images .
+	mv ${GLUON_BUILD_DIR}/output .
 
 sign: manifest
-	${GLUON_BUILD_DIR}/contrib/sign.sh ${SECRET_KEY_FILE} images/sysupgrade/${GLUON_BRANCH}.manifest
+	${GLUON_BUILD_DIR}/contrib/sign.sh ${SECRET_KEY_FILE} output/images/sysupgrade/${GLUON_BRANCH}.manifest
 
 ${GLUON_BUILD_DIR}:
 	git clone ${GLUON_GIT_URL} ${GLUON_BUILD_DIR}
 
-gluon-prepare: images-clean ${GLUON_BUILD_DIR}
-	(cd ${GLUON_BUILD_DIR} && git fetch origin && git checkout -q ${GLUON_GIT_REF})
+gluon-prepare: output-clean ${GLUON_BUILD_DIR}
+	(cd ${GLUON_BUILD_DIR} \
+	  && git remote set-url origin ${GLUON_GIT_URL} \
+	  && git fetch origin \
+	  && git checkout -q ${GLUON_GIT_REF})
 	ln -sfT .. ${GLUON_BUILD_DIR}/site
 	${GLUON_MAKE} update
 
 gluon-clean:
 	rm -rf ${GLUON_BUILD_DIR}
 
-images-clean:
-	rm -rf images
+output-clean:
+	rm -rf output
 
-clean: gluon-clean images-clean
+clean: gluon-clean output-clean
