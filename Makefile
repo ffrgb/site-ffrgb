@@ -16,11 +16,11 @@ else
   GLUON_BRANCH := experimental
 endif
 
-JOBS = 1
+JOBS ?= $(shell cat /proc/cpuinfo | grep processor | wc -l)
 
 GLUON_MAKE := ${MAKE} -j ${JOBS} -C ${GLUON_BUILD_DIR} \
 			GLUON_RELEASE=${GLUON_RELEASE} \
-			GLUON_BRANCH=${GLUON_BRANCH} \
+			GLUON_BRANCH=${GLUON_BRANCH}
 
 all: info
 	${MAKE} manifest
