@@ -1,6 +1,6 @@
 GLUON_BUILD_DIR := gluon-build
 GLUON_GIT_URL := https://github.com/freifunk-gluon/gluon.git
-GLUON_GIT_REF := df018ed7c7f33006565918bf7d4cc4caab631aee
+GLUON_GIT_REF := 14ccbd2f5ddbd451638330d90af241f99dc3acd0
 
 #https://github.com/freifunk-gluon/gluon/commit/6b8888fe5aebd941c5e7a83a97ceb0678bee4c43
 
@@ -11,8 +11,7 @@ GLUON_TARGETS ?= \
 	ar71xx-nand \
 	mpc85xx-generic \
 	x86-64 \
-	x86-generic \
-	x86-kvm_guest 
+	x86-generic 
 
 GLUON_RELEASE := $(shell git describe --tags 2>/dev/null)
 ifneq (,$(shell git describe --exact-match --tags 2>/dev/null))
