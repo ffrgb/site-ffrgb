@@ -1,13 +1,17 @@
 GLUON_BUILD_DIR := gluon-build
 GLUON_GIT_URL := https://github.com/freifunk-gluon/gluon.git
-GLUON_GIT_REF := v2015.1
+GLUON_GIT_REF := 14ccbd2f5ddbd451638330d90af241f99dc3acd0
+
+#https://github.com/freifunk-gluon/gluon/commit/6b8888fe5aebd941c5e7a83a97ceb0678bee4c43
 
 SECRET_KEY_FILE ?= ${HOME}/.gluon-secret-key
 
 GLUON_TARGETS ?= \
 	ar71xx-generic \
 	ar71xx-nand \
-	x86-kvm_guest
+	mpc85xx-generic \
+	x86-64 \
+	x86-generic 
 
 GLUON_RELEASE := $(shell git describe --tags 2>/dev/null)
 ifneq (,$(shell git describe --exact-match --tags 2>/dev/null))
@@ -17,9 +21,10 @@ else
 endif
 
 JOBS ?= $(shell cat /proc/cpuinfo | grep processor | wc -l)
-JOBS = 1
 
-GLUON_MAKE := ${MAKE} -j ${JOBS} -C ${GLUON_BUILD_DIR} \
+#JOBS = 1
+
+GLUON_MAKE := ${MAKE} V=s -j ${JOBS} -C ${GLUON_BUILD_DIR} \
 			GLUON_RELEASE=${GLUON_RELEASE} \
 			GLUON_BRANCH=${GLUON_BRANCH} \
 
@@ -40,9 +45,16 @@ build: gluon-prepare
 		${GLUON_MAKE} GLUON_TARGET="$$target"; \
 	done
 
+buildonly: 
+	for target in ${GLUON_TARGETS}; do \
+                echo ""Building target $$target""; \
+                ${GLUON_MAKE} GLUON_TARGET="$$target"; \
+	done
+
+
 manifest: build
 	${GLUON_MAKE} manifest
-	mv ${GLUON_BUILD_DIR}/images .
+	mv ${GLUON_BUILD_DIR}/output .
 
 sign: manifest
 	${GLUON_BUILD_DIR}/contrib/sign.sh ${SECRET_KEY_FILE} images/sysupgrade/${GLUON_BRANCH}.manifest
@@ -51,7 +63,10 @@ ${GLUON_BUILD_DIR}:
 	git clone ${GLUON_GIT_URL} ${GLUON_BUILD_DIR}
 
 gluon-prepare: images-clean ${GLUON_BUILD_DIR}
-	(cd ${GLUON_BUILD_DIR} && git fetch origin && git checkout -q ${GLUON_GIT_REF})
+	(cd ${GLUON_BUILD_DIR} \
+	  && git remote set-url origin ${GLUON_GIT_URL} \
+	  && git fetch origin \
+	  && git checkout -q ${GLUON_GIT_REF})
 	ln -sfT .. ${GLUON_BUILD_DIR}/site
 	${GLUON_MAKE} update
 
