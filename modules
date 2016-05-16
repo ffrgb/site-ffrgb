@@ -1,3 +1,4 @@
-GLUON_SITE_FEEDS='ffrgb_packages'
-PACKAGES_FFRGB_PACKAGES_REPO=https://github.com/ffrgb/gluon-packages.git
-PACKAGES_FFRGB_PACKAGES_COMMIT=3441ee26433d2bd35a27440add6d6b686c1f4b38
+GLUON_SITE_FEEDS='ffrgb'
+PACKAGES_FFRGB_REPO=https://github.com/ffrgb/gluon-packages.git
+PACKAGES_FFRGB_BRANCH=master
+PACKAGES_FFRGB_COMMIT=3441ee26433d2bd35a27440add6d6b686c1f4b38
