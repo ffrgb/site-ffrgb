@@ -22,7 +22,7 @@ endif
 
 JOBS ?= $(shell cat /proc/cpuinfo | grep processor | wc -l)
 
-JOBS = 1
+#JOBS = 1
 
 GLUON_MAKE := ${MAKE} V=s -j ${JOBS} -C ${GLUON_BUILD_DIR} \
 			GLUON_RELEASE=${GLUON_RELEASE} \
