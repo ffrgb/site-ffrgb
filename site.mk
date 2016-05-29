@@ -9,7 +9,6 @@ GLUON_SITE_PACKAGES := \
 	gluon-config-mode-mesh-vpn \
 	gluon-config-mode-geo-location \
 	gluon-config-mode-contact-info \
-	gluon-config-mode-site-select \
 	gluon-ebtables-filter-multicast \
 	gluon-ebtables-filter-ra-dhcp \
 	gluon-luci-admin \
@@ -27,7 +26,7 @@ GLUON_SITE_PACKAGES := \
 	haveged \
 	gluon-ebtables-filter-arp-ffmuc \
 	gluon-ebtables-filter-multicast-ffmuc
-
+#	gluon-config-mode-site-select 
 
 # basic support for USB stack
 USB_PACKAGES_BASIC := \
