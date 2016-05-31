@@ -26,7 +26,7 @@ GLUON_SITE_PACKAGES := \
 	haveged \
 	gluon-ebtables-filter-arp-ffmuc \
 	gluon-ebtables-filter-multicast-ffmuc
-
+#	gluon-config-mode-site-select 
 
 # basic support for USB stack
 USB_PACKAGES_BASIC := \
