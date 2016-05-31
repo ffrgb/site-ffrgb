@@ -1,7 +1,7 @@
 # Freifunk Regensburg Firmware Changelog
 
-## v2016.2
- - Site Selector integrated (Segment 'Freifunk Regensburg' and 'Freifunk Regensburg Umland')
+## v2016.1-12 experimental
+ - Update to Gluon 2016.1.5
 
 ## v2016.1
  - Update to Gluon v2015.1.4
