@@ -26,6 +26,7 @@ GLUON_SITE_PACKAGES := \
 	haveged \
 	gluon-ebtables-filter-arp-ffmuc \
 	gluon-ebtables-filter-multicast-ffmuc \
+	gluon-ssid-changer \
 	tecff-ath9k-broken-wifi-workaround
 #	gluon-config-mode-site-select 
 
