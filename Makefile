@@ -1,6 +1,6 @@
 GLUON_BUILD_DIR := gluon-build
 GLUON_GIT_URL := https://github.com/freifunk-gluon/gluon.git
-GLUON_GIT_REF := v2016.1.5
+GLUON_GIT_REF := v2016.2
 
 #https://github.com/freifunk-gluon/gluon/commit/6b8888fe5aebd941c5e7a83a97ceb0678bee4c43
 
@@ -27,7 +27,7 @@ JOBS ?= $(shell cat /proc/cpuinfo | grep processor | wc -l)
 
 #JOBS = 1
 
-GLUON_MAKE := ${MAKE} BROKEN=1 -j ${JOBS} -C ${GLUON_BUILD_DIR} \
+GLUON_MAKE := ${MAKE} BROKEN=0 -j ${JOBS} -C ${GLUON_BUILD_DIR} \
 			GLUON_RELEASE=${GLUON_RELEASE} \
 			GLUON_BRANCH=${GLUON_BRANCH} \
 

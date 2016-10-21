@@ -1,4 +1,4 @@
-GLUON_SITE_FEEDS='ffrgb banner'
+GLUON_SITE_FEEDS='ffrgb'
 PACKAGES_FFRGB_REPO=https://github.com/ffrgb/gluon-packages.git
 PACKAGES_FFRGB_BRANCH=master
 PACKAGES_FFRGB_COMMIT=c9e25956356918d1e91f7e2b8fc716f8b07a789f

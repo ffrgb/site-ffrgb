@@ -27,7 +27,7 @@ GLUON_SITE_PACKAGES := \
 	gluon-ebtables-filter-arp-ffmuc \
 	gluon-ebtables-filter-multicast-ffmuc \
 	gluon-ssid-changer \
-	gluon-banner \
+#	gluon-banner \ 
 	tecff-ath9k-broken-wifi-workaround
 #	gluon-config-mode-site-select 
 
