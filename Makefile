@@ -1,6 +1,6 @@
 GLUON_BUILD_DIR := gluon-build
 GLUON_GIT_URL := https://github.com/freifunk-gluon/gluon.git
-GLUON_GIT_REF := v2016.2
+GLUON_GIT_REF := v2016.2.1
 
 #https://github.com/freifunk-gluon/gluon/commit/6b8888fe5aebd941c5e7a83a97ceb0678bee4c43
 
@@ -13,6 +13,7 @@ GLUON_TARGETS ?= \
 	ramips-mt7621 \
 	ramips-rt305x \
  	sunxi \
+	x86-kvm \
 	x86-64 \
 	x86-generic 
 
@@ -25,7 +26,7 @@ endif
 
 JOBS ?= $(shell cat /proc/cpuinfo | grep processor | wc -l)
 
-JOBS = 1
+#JOBS = 1
 
 GLUON_MAKE := ${MAKE} V=s BROKEN=0 -j ${JOBS} -C ${GLUON_BUILD_DIR} \
 			GLUON_RELEASE=${GLUON_RELEASE} \
