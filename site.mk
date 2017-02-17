@@ -25,8 +25,8 @@ GLUON_SITE_PACKAGES := \
 	iptables \
 	haveged \
 	gluon-ebtables-filter-arp-ffmuc \
-	gluon-ebtables-filter-multicast-ffmuc
-#	gluon-ssid-changer 
+	gluon-ebtables-filter-multicast-ffmuc \
+	gluon-ssid-changer 
 #	tecff-ath9k-broken-wifi-workaround
 #	gluon-config-mode-site-select 
 
