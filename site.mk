@@ -2,6 +2,7 @@ GLUON_SITE_PACKAGES := \
 	gluon-mesh-batman-adv-15 \
 	gluon-alfred \
 	gluon-respondd \
+	respondd-module-airtime \
 	gluon-autoupdater \
 	gluon-config-mode-core \
 	gluon-config-mode-autoupdater \
