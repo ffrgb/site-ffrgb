@@ -2,7 +2,6 @@ GLUON_SITE_PACKAGES := \
 	gluon-mesh-batman-adv-15 \
 	gluon-alfred \
 	gluon-respondd \
-	respondd-module-airtime \
 	gluon-autoupdater \
 	gluon-config-mode-core \
 	gluon-config-mode-autoupdater \
@@ -27,7 +26,8 @@ GLUON_SITE_PACKAGES := \
 	haveged \
 	gluon-ebtables-filter-arp-ffmuc \
 	gluon-ebtables-filter-multicast-ffmuc \
-	gluon-ssid-changer 
+	gluon-ssid-changer \
+	respondd-module-airtime 
 #	tecff-ath9k-broken-wifi-workaround
 #	gluon-config-mode-site-select 
 

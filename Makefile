@@ -14,10 +14,10 @@ GLUON_TARGETS ?= \
 	mpc85xx-generic \
 	ramips-mt7621 \
 	ramips-rt305x \
- 	sunxi \
-	x86-kvm \
 	x86-64 \
-	x86-generic
+	x86-generic \
+	sunxi \
+	x86-kvm_guest 
 	
 
 GLUON_RELEASE := $(shell git describe --tags 2>/dev/null)
@@ -29,7 +29,7 @@ endif
 
 JOBS ?= $(shell cat /proc/cpuinfo | grep processor | wc -l)
 
-JOBS = 1
+#JOBS = 1
 
 GLUON_MAKE := ${MAKE} V=s BROKEN=0 -j ${JOBS} -C ${GLUON_BUILD_DIR} \
 			GLUON_RELEASE=${GLUON_RELEASE} \
