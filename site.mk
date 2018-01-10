@@ -28,7 +28,8 @@ GLUON_SITE_PACKAGES := \
 	gluon-ebtables-filter-multicast-ffmuc \
 	gluon-ssid-changer \
 	respondd-module-airtime \
-	gluon-config-mode-site-select 
+	ffho-config-mode-site-select \
+	ffho-site-generate
 
 # basic support for USB stack
 USB_PACKAGES_BASIC := \
