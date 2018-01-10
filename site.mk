@@ -27,9 +27,8 @@ GLUON_SITE_PACKAGES := \
 	gluon-ebtables-filter-arp-ffmuc \
 	gluon-ebtables-filter-multicast-ffmuc \
 	gluon-ssid-changer \
-	respondd-module-airtime 
-#	tecff-ath9k-broken-wifi-workaround
-#	gluon-config-mode-site-select 
+	respondd-module-airtime \ 
+	gluon-config-mode-site-select 
 
 # basic support for USB stack
 USB_PACKAGES_BASIC := \
