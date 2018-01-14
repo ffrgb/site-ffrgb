@@ -18,6 +18,12 @@ msgstr ""
 "ist optional, ist jedoch nicht öffentlich einsehbar. Daher wäre es gut, "
 "wenn wir eine Möglichkeit haben, euch zu kontaktieren. "
 
+msgid "gluon-config-mode:site-select"
+msgstr ""
+"Hier hast du die Möglichkeit, die Region, in der sich dein "
+"Knoten befindet, auszuwählen. Bitte denke daran, dass dein Router "
+"sich nur mit dem Netz der ausgewählten Region verbindet."
+
 msgid "gluon-config-mode:pubkey"
 msgstr ""
 " "
