@@ -1,6 +1,5 @@
 GLUON_SITE_PACKAGES := \
 	gluon-mesh-batman-adv-15 \
-	gluon-alfred \
 	gluon-respondd \
 	gluon-autoupdater \
 	gluon-config-mode-core \
@@ -28,9 +27,11 @@ GLUON_SITE_PACKAGES := \
 	gluon-ebtables-filter-arp-ffmuc \
 	gluon-ebtables-filter-multicast-ffmuc \
 	gluon-ssid-changer \
-	respondd-module-airtime \
-	ffho-config-mode-site-select \
-	ffho-site-generate
+	ffrgb-banner \
+	respondd-module-airtime #\
+	#ffho-site-generate \
+	#ffho-config-mode-site-select \
+
 
 # basic support for USB stack
 USB_PACKAGES_BASIC := \

@@ -1,6 +1,6 @@
 GLUON_BUILD_DIR := gluon-build
-GLUON_GIT_URL := https://github.com/ffrgb/gluon
-GLUON_GIT_REF := v2016.2.7
+GLUON_GIT_URL := https://github.com/freifunk-gluon/gluon
+GLUON_GIT_REF := 3d824bd21d7f6d5db6dc238d2a68b62de471aa2a
 
 #https://github.com/freifunk-gluon/gluon/commit/6b8888fe5aebd941c5e7a83a97ceb0678bee4c43
 
@@ -17,8 +17,8 @@ GLUON_TARGETS ?= \
 	x86-64 \
 	x86-generic \
 	sunxi \
-	x86-kvm_guest 
-	
+	x86-kvm_guest
+
 
 GLUON_RELEASE := $(shell git describe --tags 2>/dev/null)
 ifneq (,$(shell git describe --exact-match --tags 2>/dev/null))
@@ -53,7 +53,7 @@ build: gluon-prepare
 		${GLUON_MAKE} GLUON_TARGET="$$target"; \
 	done
 
-buildonly: 
+buildonly:
 	for target in ${GLUON_TARGETS}; do \
                 echo ""Building target $$target""; \
                 ${GLUON_MAKE} GLUON_TARGET="$$target"; \
