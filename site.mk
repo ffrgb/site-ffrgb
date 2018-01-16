@@ -212,4 +212,4 @@ GLUON_PRIORITY ?= 0
 
 # Languages to include
 GLUON_LANGS ?= en de
-GLUON_ATH10K_MESH := ibss
+GLUON_WLAN_MESH := ibss
