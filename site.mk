@@ -137,6 +137,7 @@ ifeq ($(GLUON_TARGET),x86-generic)
 GLUON_SITE_PACKAGES += \
 	kmod-usb-hid \
 	kmod-hid-generic \
+	kmod-button-hotplug \
 	$(USB_PACKAGES_BASIC) \
 	$(USB_PACKAGES_STORAGE) \
 	$(USB_PACKAGES_NET) \
@@ -152,6 +153,7 @@ ifeq ($(GLUON_TARGET),x86-64)
 GLUON_SITE_PACKAGES += \
 	kmod-usb-hid \
 	kmod-hid-generic \
+	kmod-button-hotplug \
 	$(USB_PACKAGES_BASIC) \
 	$(USB_PACKAGES_STORAGE) \
 	$(USB_PACKAGES_NET) \
