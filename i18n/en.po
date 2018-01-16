@@ -21,6 +21,15 @@ msgstr ""
 "your node is placed. Please keep in mind that your router "
 "connects only with the mesh of the selected region"
 
+msgid "gluon-config-mode:domain"
+msgstr "Domain"
+
+msgid "gluon-config-mode:domain-select"
+msgstr ""
+"Here you have the possibility of selecting the domain in which your node is "
+"placed. Please keep in mind that your router only connects with the nodes of "
+"the selected domain"
+
 msgid "gluon-config-mode:pubkey"
 msgstr ""
 " "

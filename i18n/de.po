@@ -24,6 +24,15 @@ msgstr ""
 "Knoten befindet, auszuwählen. Bitte denke daran, dass dein Router "
 "sich nur mit dem Netz der ausgewählten Region verbindet."
 
+msgid "gluon-config-mode:domain"
+msgstr "Domäne"
+
+msgid "gluon-config-mode:domain-select"
+msgstr ""
+"Hier hast du die Möglichkeit, die Domäne, in der sich dein Knoten befindet, "
+"auszuwählen. Bitte denke daran, dass sich dein Knoten nur mit den Knoten der "
+"ausgewählten Domäne verbinden kann."
+
 msgid "gluon-config-mode:pubkey"
 msgstr ""
 " "
