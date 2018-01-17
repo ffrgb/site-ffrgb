@@ -32,7 +32,7 @@ msgstr ""
 
 msgid "gluon-config-mode:pubkey"
 msgstr ""
-" "
+"FastD enabled"
 
 msgid "gluon-config-mode:novpn"
 msgstr ""
