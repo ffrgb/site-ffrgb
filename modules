@@ -1,7 +1,7 @@
 GLUON_SITE_FEEDS='ffrgb ffhb ffho'
 PACKAGES_FFRGB_REPO=https://github.com/ffrgb/gluon-packages.git
 PACKAGES_FFRGB_BRANCH=master
-PACKAGES_FFRGB_COMMIT=d995312ea9f69639b3977e10f29a07d0acd8a389
+PACKAGES_FFRGB_COMMIT=600b92dd58a88783f7ceeed7c74a8b5ebac2fa18
 
 #respondd-module-airtime
 PACKAGES_FFHB_REPO=git://github.com/FreifunkBremen/ffhb-packages.git
