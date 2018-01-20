@@ -24,8 +24,6 @@ GLUON_SITE_PACKAGES := \
 	iwinfo \
 	iptables \
 	haveged \
-	gluon-ebtables-filter-arp-ffmuc \
-	gluon-ebtables-filter-multicast-ffmuc \
 	gluon-ssid-changer \
 	respondd-module-airtime \
 	ffrgb-banner #\
