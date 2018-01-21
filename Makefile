@@ -1,13 +1,13 @@
 GLUON_BUILD_DIR := gluon-build
 GLUON_GIT_URL := https://github.com/ffrgb/gluon
-GLUON_GIT_REF := e94c0d5aa57ee8516a3cf6929b4ca58da2bded33
+GLUON_GIT_REF := 01336f70ecc7ad1c0b4a3260a8b64ad8002540a6
 
 #https://github.com/freifunk-gluon/gluon/commit/6b8888fe5aebd941c5e7a83a97ceb0678bee4c43
 
 SECRET_KEY_FILE ?= ${HOME}/.gluon-secret-key
 
 GLUON_TARGETS ?= \
-	ar71xx-generic \
+	ar71xx-generic #\
 	ar71xx-tiny \
 	ar71xx-nand \
 	brcm2708-bcm2708 \
