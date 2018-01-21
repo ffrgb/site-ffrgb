@@ -7,7 +7,7 @@ GLUON_GIT_REF := 695a402c6e85b01d229b24548efa76f4244751ec
 SECRET_KEY_FILE ?= ${HOME}/.gluon-secret-key
 
 GLUON_TARGETS ?= \
-	ar71xx-generic #\
+	ar71xx-generic \
 	ar71xx-tiny \
 	ar71xx-nand \
 	brcm2708-bcm2708 \
