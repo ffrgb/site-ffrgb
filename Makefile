@@ -8,7 +8,7 @@ SECRET_KEY_FILE ?= ${HOME}/.gluon-secret-key
 
 GLUON_TARGETS ?= \
 	ar71xx-generic \
-	ar71xx-tiny \
+	ar71xx-tiny #\
 	ar71xx-nand \
 	brcm2708-bcm2708 \
 	brcm2708-bcm2709 \
