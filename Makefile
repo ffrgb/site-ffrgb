@@ -1,14 +1,14 @@
 GLUON_BUILD_DIR := gluon-build
-GLUON_GIT_URL := https://github.com/freifunk-gluon/gluon
-GLUON_GIT_REF := 6ae067cb379436bc915b2a5e6865106e9fb24c29
+GLUON_GIT_URL := https://github.com/ffrgb/gluon
+GLUON_GIT_REF := 521db49ffbfc20c4755840803cd543070cd7779f
 
 #https://github.com/freifunk-gluon/gluon/commit/6b8888fe5aebd941c5e7a83a97ceb0678bee4c43
 
 SECRET_KEY_FILE ?= ${HOME}/.gluon-secret-key
 
 GLUON_TARGETS ?= \
-	x86-64 \
 	ar71xx-generic \
+	x86-64 \
 	ar71xx-tiny \
 	ar71xx-nand \
 	brcm2708-bcm2708 \
@@ -33,7 +33,7 @@ JOBS ?= $(shell cat /proc/cpuinfo | grep processor | wc -l)
 
 #JOBS = 1
 
-GLUON_MAKE := ${MAKE} BROKEN=0 -j ${JOBS} -C ${GLUON_BUILD_DIR} \
+GLUON_MAKE := ${MAKE} V=s BROKEN=0 -j ${JOBS} -C ${GLUON_BUILD_DIR} \
 			GLUON_RELEASE=${GLUON_RELEASE} \
 			GLUON_BRANCH=${GLUON_BRANCH} \
 

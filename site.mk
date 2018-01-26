@@ -215,3 +215,4 @@ GLUON_PRIORITY ?= 0
 # Languages to include
 GLUON_LANGS ?= en de
 GLUON_WLAN_MESH := ibss
+GLUON_MULTIDOMAIN=1
