@@ -7,7 +7,7 @@ GLUON_GIT_REF := c20f94fec9e5cae3af9290c6419b71719dcfb951
 SECRET_KEY_FILE ?= ${HOME}/.gluon-secret-key
 
 GLUON_TARGETS ?= \
-	ar71xx-generic \
+	ar71xx-generic #\
 	x86-64 \
 	ar71xx-tiny \
 	ar71xx-nand \
