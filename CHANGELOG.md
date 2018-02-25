@@ -1,5 +1,8 @@
 # Freifunk Regensburg Firmware Changelog
 
+## v2018.1.2-2 experimental
+ - Switch to domain-select features from Upstream Gluon
+
 ## v2016.1-12 experimental
  - Update to Gluon 2016.1.5
 
