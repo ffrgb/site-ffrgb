@@ -6,18 +6,19 @@ SECRET_KEY_FILE ?= ${HOME}/.gluon-secret-key
 
 GLUON_TARGETS ?= \
 	ar71xx-generic \
-	x86-64 \
-	ar71xx-tiny \
-	ar71xx-nand \
-	brcm2708-bcm2708 \
-	brcm2708-bcm2709 \
-	mpc85xx-generic \
-	ramips-mt7621 \
-	ramips-rt305x \
-	x86-64 \
-	x86-generic \
-	x86-geode \
-	sunxi
+	ar71xx-tiny\
+#	x86-64 \
+#	ar71xx-tiny \
+#	ar71xx-nand \
+#	brcm2708-bcm2708 \
+#	brcm2708-bcm2709 \
+#	mpc85xx-generic \
+#	ramips-mt7621 \
+#	ramips-rt305x \
+#	x86-64 \
+#	x86-generic \
+#	x86-geode \
+#	sunxi
 
 
 GLUON_RELEASE := $(shell git describe --tags 2>/dev/null)
