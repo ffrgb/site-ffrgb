@@ -4,9 +4,9 @@ GLUON_GIT_REF := v2019.1
 
 SECRET_KEY_FILE ?= ${HOME}/.gluon-secret-key
 
+
 GLUON_TARGETS ?= \
 	ar71xx-generic \
-	x86-64 \
 	ar71xx-tiny \
 	ar71xx-nand \
 	brcm2708-bcm2708 \
@@ -17,7 +17,6 @@ GLUON_TARGETS ?= \
 	x86-64 \
 	x86-generic \
 	x86-geode \
-	sunxi
 
 
 GLUON_RELEASE := $(shell git describe --tags 2>/dev/null)
@@ -31,7 +30,7 @@ JOBS ?= $(shell cat /proc/cpuinfo | grep processor | wc -l)
 
 #JOBS = 1
 
-GLUON_MAKE := ${MAKE} BROKEN=0 -j ${JOBS} -C ${GLUON_BUILD_DIR} \
+GLUON_MAKE := ${MAKE} V=s BROKEN=0 -j ${JOBS} -C ${GLUON_BUILD_DIR} \
 			GLUON_RELEASE=${GLUON_RELEASE} \
 			GLUON_BRANCH=${GLUON_BRANCH} \
 
