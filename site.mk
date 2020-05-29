@@ -209,9 +209,11 @@ DEFAULT_GLUON_RELEASE := snapshot~$(shell date '+%Y%m%d')
 # Allow overriding the release number from the command line
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
 
+GLUON_DEPRECATED ?= 1
+
 GLUON_PRIORITY ?= 0
 
 # Languages to include
 GLUON_LANGS ?= en de
-GLUON_WLAN_MESH := ibss
+GLUON_WLAN_MESH := 11s
 GLUON_MULTIDOMAIN=1
