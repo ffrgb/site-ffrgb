@@ -18,14 +18,12 @@ GLUON_SITE_PACKAGES := \
 	gluon-web-wifi-config \
 	gluon-web-mesh-vpn-fastd \
 	gluon-web-private-wifi \
-	gluon-mesh-vpn-tunneldigger \
 	gluon-radvd \
 	gluon-setup-mode \
 	gluon-status-page \
 	gluon-segment-mover \
 	iwinfo \
 	iptables \
-	haveged \
 	gluon-ssid-changer \
 	respondd-module-airtime \
 	ffrgb-banner #\
