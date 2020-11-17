@@ -6,7 +6,9 @@ SECRET_KEY_FILE ?= ${HOME}/.gluon-secret-key
 
 
 GLUON_TARGETS ?= \
-	ar71xx-generic \
+        x86-64 \
+        x86-generic \
+#	ar71xx-generic \
 	ar71xx-tiny \
 	ar71xx-nand \
 	ath79-generic \
