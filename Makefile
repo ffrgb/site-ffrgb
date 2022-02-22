@@ -1,11 +1,12 @@
 GLUON_BUILD_DIR := gluon-build
 GLUON_GIT_URL := https://github.com/freifunk-gluon/gluon
-GLUON_GIT_REF := bbc00017a922fc691297c3ca1263cb7057f63e24
+GLUON_GIT_REF := v2021.1.1
 
 SECRET_KEY_FILE ?= ${HOME}/.gluon-secret-key
 
 
 GLUON_TARGETS ?= \
+        x86-generic \
 	ar71xx-generic \
 	ar71xx-tiny \
 	ar71xx-nand \

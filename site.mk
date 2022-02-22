@@ -5,10 +5,10 @@ GLUON_SITE_PACKAGES := \
 	gluon-config-mode-core \
 	gluon-config-mode-autoupdater \
 	gluon-config-mode-hostname \
-	gluon-config-mode-mesh-vpn \
 	gluon-config-mode-domain-select \
 	gluon-config-mode-geo-location \
 	gluon-config-mode-contact-info \
+	gluon-config-mode-mesh-vpn \
 	gluon-ebtables-filter-multicast \
 	gluon-ebtables-filter-ra-dhcp \
 	gluon-ebtables-source-filter \
@@ -16,7 +16,6 @@ GLUON_SITE_PACKAGES := \
 	gluon-web-autoupdater \
 	gluon-web-network \
 	gluon-web-wifi-config \
-	gluon-web-mesh-vpn-fastd \
 	gluon-web-private-wifi \
 	gluon-radvd \
 	gluon-setup-mode \
@@ -26,6 +25,7 @@ GLUON_SITE_PACKAGES := \
 	iptables \
 	gluon-ssid-changer \
 	respondd-module-airtime \
+	gluon-mesh-vpn-wireguard-vxlan \
 	ffrgb-banner #\
 	#ffho-site-generate \
 	#ffho-config-mode-site-select \
