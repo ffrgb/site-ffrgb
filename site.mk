@@ -1,34 +1,27 @@
+GLUON_FEATURES := \
+	autoupdater \
+	config-mode-domain-select \
+	config-mode-geo-location-osm \
+	config-mode-mesh-vpn \
+	ebtables-filter-multicast \
+	ebtables-filter-ra-dhcp \
+	ebtables-source-filter \
+	mesh-batman-adv-15 \
+	respondd \
+	status-page \
+	web-advanced \
+	web-private-wifi \
+	web-wizard
+
+
 GLUON_SITE_PACKAGES := \
-	gluon-mesh-batman-adv-15 \
-	gluon-respondd \
-	gluon-autoupdater \
-	gluon-config-mode-core \
-	gluon-config-mode-autoupdater \
-	gluon-config-mode-hostname \
-	gluon-config-mode-domain-select \
-	gluon-config-mode-geo-location \
-	gluon-config-mode-contact-info \
-	gluon-config-mode-mesh-vpn \
-	gluon-ebtables-filter-multicast \
-	gluon-ebtables-filter-ra-dhcp \
-	gluon-ebtables-source-filter \
-	gluon-web-admin \
-	gluon-web-autoupdater \
-	gluon-web-network \
-	gluon-web-wifi-config \
-	gluon-web-private-wifi \
-	gluon-radvd \
-	gluon-setup-mode \
-	gluon-status-page \
 	gluon-segment-mover \
 	iwinfo \
 	iptables \
 	gluon-ssid-changer \
 	respondd-module-airtime \
 	gluon-mesh-vpn-wireguard-vxlan \
-	ffrgb-banner #\
-	#ffho-site-generate \
-	#ffho-config-mode-site-select \
+	ffrgb-banner 
 
 
 # basic support for USB stack

@@ -1,6 +1,6 @@
 GLUON_BUILD_DIR := gluon-build
 GLUON_GIT_URL := https://github.com/freifunk-gluon/gluon
-GLUON_GIT_REF := v2021.1.1
+GLUON_GIT_REF := e60b3eb386e1df3d48ee0f0bf8fe4cccbfe2397a
 
 SECRET_KEY_FILE ?= ${HOME}/.gluon-secret-key
 
@@ -40,7 +40,7 @@ JOBS ?= $(shell cat /proc/cpuinfo | grep processor | wc -l)
 
 #JOBS = 1
 
-GLUON_MAKE := ${MAKE} V=s BROKEN=0 -j ${JOBS} -C ${GLUON_BUILD_DIR} \
+GLUON_MAKE := ${MAKE} BROKEN=0 -j ${JOBS} -C ${GLUON_BUILD_DIR} \
 			GLUON_RELEASE=${GLUON_RELEASE} \
 			GLUON_BRANCH=${GLUON_BRANCH} \
 
