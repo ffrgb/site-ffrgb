@@ -2,7 +2,7 @@
 
 You need to have some prerequisits:
 
-    apt install build-essential gawk unzip libncurses-dev libz-dev libssl-dev wget git subversion
+    apt install build-essential gawk unzip libncurses-dev libz-dev libssl-dev wget git subversion python2.7
 
 Check out this repository and execute `make`, i.e. like this:
 
@@ -24,5 +24,5 @@ Think about starting Your make process inside a `screen` session as it usually t
 
 ## Further Resources
 
-Look at the [site configuration related Gluon documentation](http://gluon.readthedocs.org/en/v2016.2.3/user/site.html)
+Look at the [site configuration related Gluon documentation](https://gluon.readthedocs.io/en/v2021.1.1/user/site.html)
 for information on site configuration options and examples from other communities.
