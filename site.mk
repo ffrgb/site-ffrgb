@@ -17,7 +17,6 @@ GLUON_FEATURES := \
 GLUON_SITE_PACKAGES := \
 	gluon-segment-mover \
 	iwinfo \
-	iptables \
 	gluon-ssid-changer \
 	respondd-module-airtime \
 	gluon-mesh-vpn-wireguard-vxlan \
