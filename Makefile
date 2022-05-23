@@ -1,6 +1,6 @@
 GLUON_BUILD_DIR := gluon-build
 GLUON_GIT_URL := https://github.com/freifunk-gluon/gluon
-GLUON_GIT_REF := 204f7e56e31a5e114d594582bbaba5b751770e98
+GLUON_GIT_REF := a0df96eb97f785d6fd8e261b44e3a062ecdabbeb
 
 SECRET_KEY_FILE ?= ${HOME}/.gluon-secret-key
 
@@ -26,7 +26,7 @@ GLUON_TARGETS ?= \
 	sunxi-cortexa7 \
 	x86-64 \
 	x86-generic \
-	x86-geode \
+	x86-geode 
 
 
 
