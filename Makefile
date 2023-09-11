@@ -2,6 +2,8 @@ GLUON_BUILD_DIR := gluon-build
 GLUON_GIT_URL := https://github.com/freifunk-gluon/gluon
 GLUON_GIT_REF := 4e2bd01d5f7ee1677d522e75c3818719e513eb01
 
+PATCH_DIR := ./patches
+
 SECRET_KEY_FILE ?= ${HOME}/.gluon-secret-key
 
 GLUON_TARGETS ?= $(shell cat targets | tr '\n' ' ')
@@ -64,8 +66,12 @@ gluon-update: | ${GLUON_BUILD_DIR}/.git
 	cd ${GLUON_BUILD_DIR} && git clean -fd
 
 gluon-prepare: gluon-update
+	make gluon-patch
 	ln -sfT .. ${GLUON_BUILD_DIR}/site
 	${GLUON_MAKE} update
+
+gluon-patch:
+	scripts/apply_patches.sh ${GLUON_BUILD_DIR} ${PATCH_DIR}
 
 gluon-clean:
 	rm -rf ${GLUON_BUILD_DIR}
