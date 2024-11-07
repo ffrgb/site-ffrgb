@@ -1,6 +1,6 @@
 GLUON_BUILD_DIR := gluon-build
 GLUON_GIT_URL := https://github.com/freifunk-gluon/gluon
-GLUON_GIT_REF := 4e2bd01d5f7ee1677d522e75c3818719e513eb01
+GLUON_GIT_REF := v2023.2.4
 
 PATCH_DIR := ./patches
 
